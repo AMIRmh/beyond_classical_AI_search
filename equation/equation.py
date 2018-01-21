@@ -14,10 +14,6 @@ class state:
     def __gt__(self, other):
         return self.evaluate() > other.evaluate()
 
-
-
-
-
 def initialize():
     arr = []
     for i in range(4):
@@ -48,9 +44,4 @@ def mutation(population, rand_total_gen):
     rand_num = random.randint(0,10)
     chromosome_index = rand_total_gen / 4
     mutation_element = rand_total_gen % 4
-    population[chromosome_index].val[mutation_element] = rand_num
-
-
-
-
-
+    population[int(chromosome_index)].val[int(mutation_element)] = rand_num
